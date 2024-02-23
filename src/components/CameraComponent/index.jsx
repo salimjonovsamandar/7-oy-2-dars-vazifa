@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import styles from "./index.module.css";
 
 function Index() {
 
@@ -39,10 +40,12 @@ function Index() {
 
     return (
         <div>
-            <div>
-                <video ref={videoRef} autoPlay />
-                <button onClick={startCamera}>Start Camera</button>
-                <button onClick={captureImage}>Capture Image</button>
+            <div className={styles.wrapper_video}>
+                <video className={styles.video} ref={videoRef} autoPlay />
+                <div className={styles.btn}>
+                    <button className={styles.button} onClick={startCamera}>Camerani yoqing</button>
+                    <button className={styles.button} onClick={captureImage}>Rasmga oling</button>
+                </div>
             </div>
         </div>
     )
